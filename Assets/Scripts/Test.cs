@@ -9,7 +9,7 @@ public class Test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 newPosition = transform.position + new Vector3(0.0f, 0.0f, 1.0f / timer);
+        Vector3 newPosition = transform.position + new Vector3(Time.deltaTime * 10f, 0.0f, 1.0f / timer);
         transform.position = newPosition;
 
         timer -= Time.deltaTime;
